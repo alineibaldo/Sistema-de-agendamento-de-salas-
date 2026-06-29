@@ -1,0 +1,283 @@
+.users-page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.users-summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.users-summary-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 22px;
+  padding: 20px;
+  box-shadow: 0 6px 22px rgba(15, 23, 42, 0.04);
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.users-summary-card span {
+  color: #6b7280;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.users-summary-card strong {
+  color: #1f2937;
+  font-size: 32px;
+  line-height: 1;
+}
+
+.users-summary-card.success {
+  border-color: #bbf7d0;
+}
+
+.users-summary-card.danger {
+  border-color: #fecaca;
+}
+
+.users-content {
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.users-form-card,
+.users-list-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 22px;
+  padding: 24px;
+  box-shadow: 0 6px 22px rgba(15, 23, 42, 0.04);
+}
+
+.users-card-header {
+  margin-bottom: 18px;
+}
+
+.users-card-header h2 {
+  margin: 0;
+  color: #1f2937;
+  font-size: 20px;
+}
+
+.users-card-header p {
+  margin: 6px 0 0;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.users-form-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.users-form-grid label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: #374151;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.users-form-grid input,
+.users-form-grid select {
+  border: 1px solid #d1d5db;
+  border-radius: 12px;
+  padding: 12px 13px;
+  color: #1f2937;
+  background: #ffffff;
+  font-size: 14px;
+}
+
+.users-form-grid input:focus,
+.users-form-grid select:focus {
+  outline: none;
+  border-color: #2f9e44;
+  box-shadow: 0 0 0 3px rgba(47, 158, 68, 0.12);
+}
+
+.users-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.users-primary-button,
+.users-secondary-button,
+.users-item-actions button {
+  border: none;
+  border-radius: 12px;
+  padding: 12px 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.users-primary-button {
+  background: #2f9e44;
+  color: white;
+}
+
+.users-primary-button:hover {
+  background: #237a35;
+}
+
+.users-secondary-button {
+  background: #f3f4f6;
+  color: #374151;
+}
+
+.users-secondary-button:hover {
+  background: #e5e7eb;
+}
+
+.users-empty {
+  border: 1px dashed #d1d5db;
+  border-radius: 16px;
+  padding: 24px;
+  color: #6b7280;
+  text-align: center;
+  background: #f9fafb;
+}
+
+.users-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.users-item {
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  padding: 16px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.users-item-main {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.users-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  background: #eaf7ec;
+  color: #237a35;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+  font-weight: 800;
+  font-size: 18px;
+}
+
+.users-item strong {
+  display: block;
+  color: #1f2937;
+  margin-bottom: 4px;
+}
+
+.users-item span {
+  display: block;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.users-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.users-badges small {
+  background: #f3f4f6;
+  color: #374151;
+  border-radius: 999px;
+  padding: 5px 9px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.user-status.active {
+  background: #eaf7ec !important;
+  color: #237a35 !important;
+}
+
+.user-status.inactive {
+  background: #fef2f2 !important;
+  color: #b91c1c !important;
+}
+
+.user-status.warning {
+  background: #fff7ed !important;
+  color: #c2410c !important;
+}
+
+.users-item-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.users-item-actions button {
+  background: #f3f4f6;
+  color: #374151;
+}
+
+.users-item-actions button:hover {
+  background: #e5e7eb;
+}
+
+.users-item-actions .activate-button {
+  background: #eaf7ec;
+  color: #237a35;
+}
+
+.users-item-actions .deactivate-button {
+  background: #fef2f2;
+  color: #b91c1c;
+}
+
+@media (max-width: 1100px) {
+  .users-content {
+    grid-template-columns: 1fr;
+  }
+
+  .users-summary {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .users-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .users-item-actions {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .users-item-actions button {
+    width: 100%;
+  }
+}
