@@ -1,26 +1,24 @@
-# Agenda IFRS
+# 📅 Agenda IFRS
 
 Sistema web para gerenciamento de reservas de salas desenvolvido como Projeto de Extensão do curso de Análise e Desenvolvimento de Sistemas da PUCRS.
 
-> **Importante:** Este é um sistema independente, desenvolvido para apoiar o gerenciamento de reservas de salas do IFRS Campus Porto Alegre Zona Norte. Não se trata de um sistema oficial da instituição.
+> **Importante:** este é um sistema **independente**, desenvolvido para apoiar o gerenciamento de reservas de salas do IFRS Campus Porto Alegre Zona Norte. Não é um sistema oficial da instituição.
 
 ---
 
-## Objetivo
+## 📌 Objetivo
 
-O Agenda IFRS foi desenvolvido para centralizar o processo de solicitação e gerenciamento de reservas de salas, reduzindo conflitos de horário e facilitando o controle das reservas por administradores.
-
-O sistema permite que servidores solicitem reservas e que administradores realizem o gerenciamento de usuários, salas e aprovações de agendamentos.
+O Agenda IFRS foi desenvolvido para facilitar o gerenciamento de reservas de salas, permitindo que servidores realizem solicitações de agendamento e que administradores controlem usuários, salas e aprovações em um único sistema.
 
 ---
 
-## Funcionalidades
+## ✨ Funcionalidades
 
 ### Autenticação
 
-- Login
+- Login com JWT
 - Controle de perfis (Administrador e Servidor)
-- Primeiro acesso com troca obrigatória de senha
+- Troca obrigatória de senha no primeiro acesso
 - Alteração de senha
 
 ### Dashboard
@@ -34,12 +32,10 @@ O sistema permite que servidores solicitem reservas e que administradores realiz
 
 ### Calendário
 
-- Visualização semanal
-- Visualização diária
-- Visualização mensal
+- Visualização diária, semanal e mensal
 - Filtros por sala
 - Filtros por status
-- Pesquisa de reservas
+- Pesquisa por título, sala e responsável
 
 ### Reservas
 
@@ -47,7 +43,7 @@ O sistema permite que servidores solicitem reservas e que administradores realiz
 - Editar reserva
 - Aprovar reserva
 - Cancelar reserva
-- Validação de conflitos de horário
+- Validação automática de conflitos de horário
 
 ### Salas
 
@@ -64,27 +60,34 @@ O sistema permite que servidores solicitem reservas e que administradores realiz
 
 ---
 
-## Tecnologias utilizadas
+# 🖥️ Tecnologias
 
-### Frontend
+## Frontend
 
 - React
 - TypeScript
 - Vite
+- Axios
 - FullCalendar
 - Lucide React
 
-### Backend
+## Backend
 
 - NestJS
 - Prisma ORM
 - PostgreSQL
 - JWT
-- bcrypt
+- Bcrypt
+
+## Banco de Dados
+
+- PostgreSQL
+- Prisma Migrate
+- Prisma Seed
 
 ---
 
-## Estrutura do projeto
+# 📂 Estrutura
 
 ```
 agenda-ifrs/
@@ -93,63 +96,115 @@ agenda-ifrs/
 │
 ├── frontend/
 │
-└── README.md
+├── README.md
+│
+└── .gitignore
 ```
 
 ---
 
-## Como executar o projeto
+# 🚀 Como executar
 
-### Backend
+## Clonar o projeto
+
+```bash
+git clone https://github.com/alineibaldo/Sistema-de-agendamento-de-salas-.git
+
+cd Sistema-de-agendamento-de-salas-
+```
+
+---
+
+## Backend
 
 ```bash
 cd backend
+
 npm install
+
+npx prisma migrate dev
+
+npx prisma db seed
+
 npm run start:dev
 ```
 
-### Frontend
+---
+
+## Frontend
 
 ```bash
 cd frontend
+
 npm install
+
 npm run dev
 ```
 
 ---
 
-## Banco de dados
+# 🔑 Usuários de teste
 
-O projeto utiliza PostgreSQL.
+Após executar o seed:
 
-Após configurar a variável `DATABASE_URL`, execute:
+## Administrador
 
-```bash
-npx prisma migrate dev
-npx prisma generate
+**E-mail**
+
+```
+admin@ifrs.edu.br
+```
+
+**Senha**
+
+```
+Admin@123
 ```
 
 ---
 
-## Perfis de acesso
+## Servidor
 
-### Administrador
+**E-mail**
 
-- Gerenciar usuários
-- Gerenciar salas
-- Aprovar reservas
-- Cancelar reservas
-- Editar reservas
+```
+servidor@ifrs.edu.br
+```
 
-### Servidor
+**Senha**
 
-- Solicitar reservas
-- Consultar calendário
-- Alterar senha
+```
+Admin@123
+```
 
 ---
 
-## Desenvolvido por
+# 📷 Telas
+
+> Adicione aqui capturas de tela do sistema.
+
+- Login
+- Dashboard
+- Calendário
+- Nova Reserva
+- Salas
+- Usuários
+- Perfil
+
+---
+
+# 🔮 Melhorias futuras
+
+- Notificações por e-mail
+- Relatórios
+- Exportação de reservas
+- Dashboard com gráficos
+- Recuperação de senha
+- Responsividade para dispositivos móveis
+
+---
+
+# 👩‍💻 Desenvolvedora
 
 **Aline Ibaldo Gonçalves**
 
@@ -160,4 +215,9 @@ Curso de Análise e Desenvolvimento de Sistemas
 Pontifícia Universidade Católica do Rio Grande do Sul (PUCRS)
 
 2026
-```
+
+---
+
+# 📄 Licença
+
+Este projeto foi desenvolvido exclusivamente para fins acadêmicos.
